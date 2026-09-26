@@ -1,6 +1,6 @@
 import type { Language, AppMode, Source, Library, Status, DailyVichaar } from "../types";
 
-const BASE = import.meta.env.VITE_API_BASE_URL || "/api";
+const BASE = ((import.meta as any).env?.VITE_API_BASE_URL as string) || "/api";
 
 export async function checkHealth(): Promise<boolean> {
   try {
