@@ -1,0 +1,274 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* ============================================================
+   OSHO MODE Background & Styling (Divine, Spiritual, Flowing)
+   ============================================================ */
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  color: #efe7d6;
+  background-color: #0f0b14;
+  background-image:
+    radial-gradient(135% 95% at 50% 118%, rgba(232, 161, 76, 0.14), transparent 58%),
+    radial-gradient(85% 60% at 85% -10%, rgba(131, 88, 181, 0.12), transparent 55%),
+    radial-gradient(75% 50% at 15% 5%, rgba(131, 88, 181, 0.08), transparent 50%),
+    linear-gradient(180deg, #150f1d 0%, #110c18 55%, #0f0b14 100%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background-image 1s cubic-bezier(0.16, 1, 0.3, 1), background-color 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.zen-halo {
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(232, 161, 76, 0.06) 0%, transparent 60%),
+    radial-gradient(circle at 10% 20%, rgba(131, 88, 181, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(232, 161, 76, 0.03) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+/* ============================================================
+   AI MODE Background & Styling (Futuristic, Cybernetic)
+   ============================================================ */
+body.ai-mode-body {
+  background-color: #050811;
+  background-image:
+    radial-gradient(135% 95% at 50% 118%, rgba(110, 168, 254, 0.06), transparent 58%),
+    radial-gradient(85% 60% at 85% -10%, rgba(60, 100, 180, 0.08), transparent 55%),
+    radial-gradient(75% 50% at 15% 5%, rgba(40, 70, 160, 0.04), transparent 50%),
+    linear-gradient(180deg, #090c1a 0%, #060914 55%, #050811 100%);
+}
+
+/* Cyber Grid layout in AI welcome */
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(110, 168, 254, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(110, 168, 254, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: center center;
+  perspective: 500px;
+  transform: perspective(500px) rotateX(60deg);
+  transform-origin: 50% 0%;
+  animation: gridTravel 25s linear infinite;
+  mask-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8) 40%, rgba(0, 0, 0, 0.8) 80%, transparent);
+}
+
+@keyframes gridTravel {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 800px; }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+:lang(hi),
+.deva {
+  font-family: "Tiro Devanagari Hindi", "Noto Serif Devanagari", serif;
+}
+
+/* ============================================================
+   Glassmorphism Styles
+   ============================================================ */
+.glass {
+  background-color: rgba(30, 24, 40, 0.35);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.008) 40%, transparent);
+  backdrop-filter: blur(12px) saturate(1.2);
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.04), 0 18px 45px -25px rgba(0, 0, 0, 0.8);
+}
+
+.ai-mode .glass {
+  background-color: rgba(8, 12, 24, 0.45);
+  border-color: rgba(110, 168, 254, 0.06);
+  box-shadow: inset 0 1px 0 0 rgba(110, 168, 254, 0.04), 0 18px 45px -25px rgba(0, 0, 0, 0.9);
+}
+
+.frost {
+  background-color: rgba(22, 19, 31, 0.72);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent 32%);
+  backdrop-filter: blur(18px) saturate(1.2);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+}
+
+/* ============================================================
+   Sidebars and Headers
+   ============================================================ */
+.sidebar-osho {
+  background-color: rgba(22, 18, 30, 0.75);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 40%);
+  backdrop-filter: blur(18px) saturate(1.2);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-ai {
+  background-color: rgba(7, 10, 19, 0.85);
+  background-image: linear-gradient(180deg, rgba(110, 168, 254, 0.03), transparent 40%);
+  backdrop-filter: blur(20px) saturate(1.1);
+  -webkit-backdrop-filter: blur(20px) saturate(1.1);
+  border-color: rgba(110, 168, 254, 0.06);
+}
+
+.header-glass {
+  backdrop-filter: blur(18px) saturate(1.2);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+}
+
+.header-osho {
+  background-color: rgba(22, 18, 30, 0.75);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 32%);
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+.header-ai {
+  background-color: rgba(7, 10, 19, 0.8);
+  background-image: linear-gradient(180deg, rgba(110, 168, 254, 0.02), transparent 40%);
+  border-color: rgba(110, 168, 254, 0.06);
+}
+
+/* ============================================================
+   3D Spherical tag cloud rules
+   ============================================================ */
+.preserve-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.tag-3d {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+  cursor: pointer;
+}
+
+/* ============================================================
+   Shimmers & Titles
+   ============================================================ */
+.dawn-title {
+  background: linear-gradient(135deg, #ffd395 0%, #e8a14c 50%, #b26c1f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 35px rgba(232, 161, 76, 0.15);
+}
+
+.ai-title {
+  background: linear-gradient(135deg, #9ec5fe 0%, #6ea8fe 50%, #3663aa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 35px rgba(110, 168, 254, 0.2);
+}
+
+.dawn-shimmer {
+  background-image: linear-gradient(100deg, #c9822f 0%, #f2c17d 30%, #fff2dc 50%, #f2c17d 70%, #c9822f 100%);
+  background-size: 220% auto;
+  background-position: 0% 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.ai-shimmer {
+  background-image: linear-gradient(100deg, #4a8bdf 0%, #9ec5fe 30%, #dceaff 50%, #9ec5fe 70%, #4a8bdf 100%);
+  background-size: 220% auto;
+  background-position: 0% 50%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ============================================================
+   Scrollbars & Selections
+   ============================================================ */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: rgba(232, 161, 76, 0.12); border-radius: 9px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(232, 161, 76, 0.24); }
+::-webkit-scrollbar-track { background: transparent; }
+
+.ai-mode ::-webkit-scrollbar-thumb { background: rgba(110, 168, 254, 0.12); }
+.ai-mode ::-webkit-scrollbar-thumb:hover { background: rgba(110, 168, 254, 0.24); }
+
+::selection { background: rgba(232, 161, 76, 0.25); color: #fff; }
+.ai-mode ::selection { background: rgba(110, 168, 254, 0.25); color: #fff; }
+
+/* ============================================================
+   Animations & Orbiters
+   ============================================================ */
+.animate-spin-slow {
+  animation: spin 45s linear infinite;
+}
+
+.animate-spin-reverse {
+  animation: spin-back 30s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spin-back {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.animate-float {
+  animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-pulse {
+  animation: pulse-ring 3s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.05); opacity: 0.4; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.msg-enter {
+  animation: msgSlide 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes msgSlide {
+  0% { opacity: 0; transform: translateY(10px) scale(0.99); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Button micro interactions */
+.btn-micro {
+  transition: transform 0.1s ease, opacity 0.1s ease;
+}
+.btn-micro:active {
+  transform: scale(0.94);
+}

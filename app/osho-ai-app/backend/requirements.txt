@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+pydantic>=2
+
+# RAG engine
+faiss-cpu
+sentence-transformers
+requests
+numpy
+
+# Ingestion: read discourses from PDF files as well as .txt
+# (build_index.py works without it, but PDFs are skipped unless it's installed)
+pypdf
+
+# sentence-transformers pulls torch; pin left to the resolver / platform wheel.
+# torch

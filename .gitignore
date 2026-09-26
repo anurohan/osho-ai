@@ -1,0 +1,40 @@
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache & build
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Large Model weights & caches (GitHub limit 100MB)
+models/
+embeddings/cache/
+*.bin
+*.pt
+*.pth
+*.onnx
+*.safetensors
+
+# Node / Frontend
+node_modules/
+npm-cache/
+dist/
+build/
+.next/
+
+# Environment and secrets
+.env
+.env.local
+*.local
+
+# IDE & OS
+.vscode/
+.idea/
+.claude/
+.DS_Store
+Thumbs.db
